@@ -1,13 +1,11 @@
-%输入波形和阶数
-%返回2^n-1个门限值
-%迭代生成
+%输入波形和阶数，返回2^n-1个门限值（均值，只适用于随机序列，可以改进成线性二分类问题），递归生成
 function threshold=Detection(Array,order)
     thres=mean(Array);
     if order==1
         threshold=thres;
         return  
     end
-       
+    
     AA=Array(Array>=thres);
     AB=Array(Array<=thres);
     
