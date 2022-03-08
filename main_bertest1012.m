@@ -11,7 +11,7 @@ clear
 local='D:\DOCUMENT\Communication\';
 fre=50;%发射速率MBps
 % seq=csvread([local 'AWG_250bit_PAM4_.csv'],2,3);
-seq=csvread([local '50M_25m_fresnel_pam4.csv'],2,0);
+seq=csvread([local '50M_25m_fresnel_pam4.csv'],2,0);%数据行列00起始点，2，0，代表数据从第3行,第1列开始。
 
 Array=seq(:,2);
 Tinterval=mean(diff(seq(:,1)));
